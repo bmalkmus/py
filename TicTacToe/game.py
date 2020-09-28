@@ -111,18 +111,26 @@ def turn ():
 
 def replay_game():
     response = ""
-    replay_responses = ["Y", "N"]
+    replay_responses = ["YES", "NO"]
     while response not in replay_responses:
-        response = input("WOULD YOU LIKE TO REPLAY? (Y / N)").upper()
-    if response == "Y":
+        response = input("WOULD YOU LIKE TO REPLAY? (YES / NO)").upper()
+    if response == "YES":
         return True
     else:
+        print("Have a nice day!")
         return False
 
+def reset_turns():
+    return 0
+
+def res_winner():
+    return False
 
 while replay == True:
-    reset_board()
     print(clear)
+    turns = reset_turns()
+    winner = res_winner()
+    board = reset_board()
     display_board()
     while turns < 9 and winner == False:
         Starter = turn()
@@ -132,7 +140,9 @@ while replay == True:
     if (winner == False and turns == 9):
         print("Appears to be a tie")
 
+    
     replay = replay_game()
+    print(replay)
 
     
 
