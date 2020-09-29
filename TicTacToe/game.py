@@ -142,7 +142,6 @@ while replay == True:
 
     
     replay = replay_game()
-    print(replay)
 
     
 
