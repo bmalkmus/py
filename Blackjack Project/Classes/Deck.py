@@ -1,5 +1,5 @@
 
-from Card import Card
+from .Card import Card
 
 suits = ('Spades', 'Clubs', 'Hearts', 'Diamonds')
 ranks = ('A','K','Q','J','10','9','8','7','6','5','4','3','2')
@@ -9,7 +9,7 @@ class Deck():
         self.deck=[]
         for suit in suits:
             for rank in ranks:
-                self.deck.append(Card.Card(suit,rank))
+                self.deck.append(Card(suit,rank))
 
     def __str__(self):
         return f"Deck has {len(self.deck)} cards."
