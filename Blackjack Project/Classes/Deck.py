@@ -13,7 +13,3 @@ class Deck():
 
     def __str__(self):
         return f"Deck has {len(self.deck)} cards."
-
-deck = Deck(suits,ranks)
-
-print(deck)
