@@ -48,10 +48,5 @@ class Player():
                         if(self.bet > self.chip_balance):
                                 print("Sorry you do not have that much to bet :(")
 
-jim = Player("JIM")
-print(jim) 
 
-jim.bet = 50
-jim.set_bet()
 
-print(jim)
