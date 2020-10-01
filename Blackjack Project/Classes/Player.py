@@ -1,6 +1,7 @@
 class Player():
     chip_balance = 500
     hand = []
+    wants_to_play=True
     bet = 0
     def __init__(self, name):
         self.name=name
