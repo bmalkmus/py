@@ -11,7 +11,7 @@ class Card ():
         return f"{self.rank} of {self.suit}"
 
 class Deck():
-    __suits = ('Spades', 'Clubs', 'Hearts', 'Diamonds')
+    __suits = (u'\u2660', u'\u2663', u'\u2665', u'\u2666')
     __ranks = ('A','K','Q','J','10','9','8','7','6','5','4','3','2')
     def __init__(self):
         self.deck=[]

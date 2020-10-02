@@ -12,10 +12,10 @@ def display_cards(turn):
     player_display = []
 
     for card in computer_hand:
-        computer_display.append(f"|{card.rank}|")
+        computer_display.append(f"|{card.rank}{card.suit}|")
 
     for card in player.hand:
-        player_display.append(f"|{card.rank}|")
+        player_display.append(f"|{card.rank}{card.suit}|")
     
     if turn == 'PLAYER':
         computer_display[0] = "|?|"
@@ -148,9 +148,8 @@ def game_play():
             another_round = input("Would you like to play another round? (YES OR NO) ").upper()
             if another_round not in round_options:
                 print("I'm sorry that is not a valid response")
-        
-        if round_options == "NO":
-            player.wants_to_play==False
+        if another_round == "NO":
+            player.wants_to_play=False
     if player.wants_to_play == False:
         print("Thanks for playing, have a wonderful day!")
     if player.chip_balance == 0:
