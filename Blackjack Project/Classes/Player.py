@@ -28,6 +28,7 @@ class Player():
         else:
             answer_choices = ["YES", "NO"]
             answer = ""
+            print(f"Your Current chip balance is: {self.chip_balance}")
             while answer not in answer_choices:
                 answer = input(f"Would you like to use your previous bet of {self.bet}? (yes or no)").upper()
 
